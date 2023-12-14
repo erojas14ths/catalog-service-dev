@@ -3,7 +3,7 @@ on: push
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: erojas14ths/catalog-service
+  IMAGE_NAME: erojas14ths/catalog-service-dev
   VERSION: latest
 
 jobs:
