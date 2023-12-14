@@ -23,12 +23,13 @@ jobs:
           java-version: 17
       - name: Set up Gradle
         uses: gradle/gradle-build-action@v2
+        id: setup-gradle
         with:
           gradle-version: 7.6.3
       - name: Build, unit tests and integration tests
         run: |
-          chmod +x gradlew
-          ./gradlew build
+          chmod +x gradle
+          gradle build
       - name: Code vulnerability scanning
         uses: anchore/scan-action@v3
         id: scan
