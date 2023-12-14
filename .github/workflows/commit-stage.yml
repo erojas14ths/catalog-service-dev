@@ -22,6 +22,10 @@ jobs:
           distribution: temurin
           java-version: 17
           cache: gradle
+      - name: Set up Gradle
+        uses: gradle/gradle-build-action@v2
+        with:
+          gradle-version: 6.5
       - name: Build, unit tests and integration tests
         run: |
           chmod +x gradlew
@@ -56,6 +60,10 @@ jobs:
           distribution: temurin
           java-version: 17
           cache: gradle
+      - name: Set up Gradle
+        uses: gradle/gradle-build-action@v2
+        with:
+          gradle-version: 6.5
       - name: Build container image
         run: |
           chmod +x gradlew
